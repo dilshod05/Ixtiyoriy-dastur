@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main() {
+    double num1, num2, result;
+    char operation;
+    cout << "Sodda kalkulyatorga xush kelibsiz!" << endl;
+    cout << "Iltimos, birinchi sonni kiriting: ";
+    cin >> num1;
+    cout << "Amalni tanlang (+, -, *, /): ";
+    cin >> operation;
+    cout << "Ikkinchi sonni kiriting: ";
+    cin >> num2;
+    switch (operation) {
+        case '+':
+            result = num1 + num2;
+            cout << "Natija: " << num1 << " + " << num2 << " = " << result << endl;
+            break;
+        case '-':
+            result = num1 - num2;
+            cout << "Natija: " << num1 << " - " << num2 << " = " << result << endl;
+            break;
+        case '*':
+            result = num1 * num2;
+            cout << "Natija: " << num1 << " * " << num2 << " = " << result << endl;
+            break;
+        case '/':
+            if (num2 != 0) {
+                result = num1 / num2;
+                cout << "Natija: " << num1 << " / " << num2 << " = " << result << endl;
+            } else {
+                cout << "Xato: Nolga bo‘lish mumkin emas!" << endl;
+            }
+            break;
+        default:
+            cout << "Xato: Noto‘g‘ri amal tanlandi!" << endl;
+    }
+    return 0;
+}
